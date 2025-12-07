@@ -20,14 +20,37 @@ app.get("/", (req, res) => {
 });
 
 // API Routes
-app.get("/api/geo/divisions", (req, res) =>
-  res.json(readJSON("divisions.json"))
-);
-app.get("/api/geo/districts", (req, res) =>
-  res.json(readJSON("districts.json"))
-);
-app.get("/api/geo/upazilas", (req, res) => res.json(readJSON("upazilas.json")));
-app.get("/api/geo/unions", (req, res) => res.json(readJSON("unions.json")));
+// Helper to wrap JSON response
+function wrapResponse(data, message = "Successfully retrieved data") {
+  return {
+    success: true,
+    data,
+    message,
+    count: Array.isArray(data) ? data.length : 1,
+    timestamp: new Date().toISOString(),
+  };
+}
+
+// API Routes
+app.get("/api/geo/divisions", (req, res) => {
+  const divisions = readJSON("divisions.json");
+  res.json(wrapResponse(divisions, "Successfully retrieved all divisions."));
+});
+
+app.get("/api/geo/districts", (req, res) => {
+  const districts = readJSON("districts.json");
+  res.json(wrapResponse(districts, "Successfully retrieved all districts."));
+});
+
+app.get("/api/geo/upazilas", (req, res) => {
+  const upazilas = readJSON("upazilas.json");
+  res.json(wrapResponse(upazilas, "Successfully retrieved all upazilas."));
+});
+
+app.get("/api/geo/unions", (req, res) => {
+  const unions = readJSON("unions.json");
+  res.json(wrapResponse(unions, "Successfully retrieved all unions."));
+});
 
 // Export app for Vercel
 module.exports = app;
