@@ -84,7 +84,7 @@ async function loadAllData() {
     const upazilasRes = await fetchData("/upazilas");
     const unionsRes = await fetchData("/unions");
 
-    allDivisions = divisionsRes.data.data || [];
+    allDivisions = divisionsRes.data || [];
     allDistricts = districtsRes.data || [];
     allUpazilas = upazilasRes.data || [];
     allUnions = unionsRes.data || [];
@@ -97,7 +97,7 @@ async function loadAllData() {
       "Select Division"
     );
     updateApiEndpoint("/api/geo/divisions");
-
+    console.log(allDistricts, allDivisions);
     clearCurrentList(); // Make blank initially
   } catch (err) {
     console.error("Failed to load initial data:", err);
@@ -192,6 +192,6 @@ unionSelect.addEventListener("change", () => {
 
   updateApiEndpoint(`/api/geo/unions`);
 });
-console.log(allDistricts, allDivisions);
+
 // Initialize
 window.addEventListener("DOMContentLoaded", loadAllData);
