@@ -1,23 +1,35 @@
 const express = require("express");
-const path = require("path");
-const dataRoutes = require("./routes/dataRoutes");
-const locationRoutes = require("./routes/locationRoutes"); // divisions, districts, upazilas, unions
-
 const app = express();
-const PORT = 3000;
+const fs = require("fs");
+const path = require("path");
 
-// Middleware
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-
-// API routes
-app.use("/api", dataRoutes); // all other APIs
-app.use("/api/geo", locationRoutes); // location APIs under /api/geo
-
-// Serve frontend
-app.use(express.static(path.join(__dirname, "public")));
-
-// Start server
-app.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}`);
+app.get("/api/divisions", (req, res) => {
+  const data = JSON.parse(
+    fs.readFileSync(path.join(process.cwd(), "data/divisions.json"))
+  );
+  res.json(data);
 });
+
+app.get("/api/districts", (req, res) => {
+  const data = JSON.parse(
+    fs.readFileSync(path.join(process.cwd(), "data/districts.json"))
+  );
+  res.json(data);
+});
+
+app.get("/api/upazilas", (req, res) => {
+  const data = JSON.parse(
+    fs.readFileSync(path.join(process.cwd(), "data/upazilas.json"))
+  );
+  res.json(data);
+});
+
+app.get("/api/unions", (req, res) => {
+  const data = JSON.parse(
+    fs.readFileSync(path.join(process.cwd(), "data/unions.json"))
+  );
+  res.json(data);
+});
+
+// IMPORTANT: No app.listen() on Vercel
+module.exports = app;
