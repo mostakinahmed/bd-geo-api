@@ -1,4 +1,4 @@
-const BASE_URL = "/api/geo";
+const BASE_URL = "https://bdopenapi.vercel.app/api/geo";
 
 const divisionSelect = document.getElementById("division-select");
 const districtSelect = document.getElementById("district-select");
