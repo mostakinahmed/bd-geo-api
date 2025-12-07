@@ -128,7 +128,8 @@
 
                 <!-- Right Column: Code Preview (50%) -->
                 <div class="mt-16 sm:mt-24 lg:mt-0 w-full lg:w-1/2 flex justify-center items-center px-2 lg:px-0">
-                    <div class="w-full max-w-md rounded-xl bg-white border-slate-200 lg:shadow-lg shadow-md p-6 ring-1 ring-gray-200">
+                    <div
+                        class="w-full max-w-md rounded-xl bg-white border-slate-200 lg:shadow-lg shadow-md p-6 ring-1 ring-gray-200">
                         <div class="flex items-center gap-2 mb-2">
                             <div class="h-2 w-2 rounded-full bg-red-400"></div>
                             <div class="h-2 w-2 rounded-full bg-yellow-300"></div>
@@ -285,13 +286,76 @@
                             class="bg-slate-900 p-4 rounded-md text-emerald-400 overflow-x-auto"><code>/api/geo/upazilas/{district_id}</code></pre>
                     </div>
                     <div class="bg-slate-800 rounded-lg p-6 flex flex-col justify-center">
+                        <p class="text-sm text-slate-400 mb-2">
+                            Get all unions
+                        </p>
+                        <pre
+                            class="bg-slate-900 p-4 rounded-md text-emerald-400 overflow-x-auto"><code>/api/geo/unions</code></pre>
+                    </div>
+                    <div class="bg-slate-800 rounded-lg p-6 flex flex-col justify-center">
                         <p class="text-sm text-slate-400 mb-2">Get unions by upzilla</p>
                         <pre
                             class="bg-slate-900 p-4 rounded-md text-emerald-400 overflow-x-auto"><code>/api/geo/unions/{upazila_id}</code></pre>
                     </div>
+
+                    <!-- extra -->
+                    <div class="bg-slate-800 cursor-pointer rounded-lg p-6 flex flex-col justify-center hover:scale-105 transition-transform duration-200"
+                        id="openModalBtn">
+                        <p class="text-sm text-slate-400 mb-2">Get All APIs</p>
+                        <pre
+                            class="bg-slate-900 p-4 text-center rounded-md text-emerald-400 overflow-x-auto">All APIs List </pre>
+                    </div>
+
                 </div>
             </div>
         </section>
+
+        <!-- Modal -->
+        <div id="apiModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+            <div class="bg-slate-900 rounded-lg w-11/12 max-w-2xl p-6 relative">
+                <!-- Close Button -->
+                <button id="closeModalBtn" class="absolute  top-3 right-3 text-slate-400 hover:text-white">
+                    <span class="lg:text-3xl text-xl "> ✕</span>
+                </button>
+
+                <h2 class="text-xl text-emerald-400 mb-4 text-center">API List</h2>
+                <div class="overflow-x-auto">
+                    <ul class="space-y-2 text-slate-300 min-w-[max-content]">
+                        <li><code>https://bdopenapi.vercel.app/api/geo/divisions</code></li>
+                        <li><code>https://bdopenapi.vercel.app/api/geo/districts</code></li>
+                        <li><code>https://bdopenapi.vercel.app/api/geo/districts/{division_id}</code></li>
+                        <li><code>https://bdopenapi.vercel.app/api/geo/upazilas</code></li>
+                        <li><code>https://bdopenapi.vercel.app/api/geo/upazilas/{district_id}</code></li>
+                        <li><code>https://bdopenapi.vercel.app/api/geo/unions</code></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <script>
+            const openModalBtn = document.getElementById('openModalBtn');
+            const closeModalBtn = document.getElementById('closeModalBtn');
+            const apiModal = document.getElementById('apiModal');
+
+            openModalBtn.addEventListener('click', () => {
+                apiModal.classList.remove('hidden');
+                apiModal.classList.add('flex');
+            });
+
+            closeModalBtn.addEventListener('click', () => {
+                apiModal.classList.add('hidden');
+                apiModal.classList.remove('flex');
+            });
+
+            // Close modal on clicking outside the modal content
+            apiModal.addEventListener('click', (e) => {
+                if (e.target === apiModal) {
+                    apiModal.classList.add('hidden');
+                    apiModal.classList.remove('flex');
+                }
+            });
+        </script>
 
         <!-- Use Cases Section Starts Here -->
         <section class="container mx-auto px-6">
