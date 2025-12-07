@@ -86,7 +86,7 @@ async function loadAllData() {
     const upazilasRes = await fetchData("/upazilas");
     const unionsRes = await fetchData("/unions");
 
-    allDivisions = divisionsRes.data.data || [];
+    allDivisions = divisionsRes.data || [];
     allDistricts = districtsRes.data || [];
     allUpazilas = upazilasRes.data || [];
     allUnions = unionsRes.data || [];
