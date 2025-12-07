@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Essential Meta Tags -->
+    <title>BD APIs – Fast & Free Bangladesh Location API (bdapi, bdapis)</title>
+    <meta name="description"
+        content="BD APIs (bdapi, bdapis) offers a powerful and fast API to get Bangladesh's geo data – divisions, districts, upazilas, and unions. Perfect for developers!" />
+    <meta name="keywords"
+        content="bdapis, bdapi, bd apis, bangladesh api, bangladesh location api, bd location data, bangladesh geo api, divisions api, districts api, upazila api, union api, bd map api, bangladesh map data, bangladesh api explorer" />
+    <meta name="author" content="Mahatab Hossen Sudip" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="BD APIs – Fast & Free Bangladesh Location API (bdapis, bdapi)" />
+    <meta property="og:description"
+        content="Access structured geo location data of Bangladesh through bdapi. Get all divisions, districts, upazilas, and unions easily." />
+    <meta property="og:url" content="https://bdapis.vercel.app" />
+    <meta property="og:image" content="https://bdapis.vercel.app/images/readme-v2.png" />
+
+    <link rel="canonical" href="https://bdapis.vercel.app" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="BD APIs – Bangladesh Geo API (bdapis, bdapi)" />
+    <meta name="twitter:description"
+        content="Developer-friendly and fast API to explore Bangladesh location data. bdapis, bdapi – everything in one place." />
+    <meta name="twitter:image" content="https://bdapis.vercel.app/images/readme-v2.png" />
+    <meta name="twitter:site" content="@SudipMHX" />
+
+    <!-- style sheet -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/*" />
+
+    <!-- Google Search Console -->
+    <meta name="google-site-verification" content="B3CoN4CXK2_a-KVMdCCRaWuP3Z__Xc-rTAYAbc_NSCo" />
+</head>
+
+<!-- ----------------------------------------------------------------------------- -->
+
+<body class="text-slate-800">
+    <!-- Header -->
+    <header class="text-slate-800 shadow-xl">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo + Title -->
+            <a href="/" class="flex items-center gap-3">
+                <svg class="w-8 h-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+                </svg>
+                <div>
+                    <h4 class="text-xl font-bold">BD APIs</h4>
+                    <p class="text-sm text-slate-500">
+                        Explore divisions, districts & upazilas
+                    </p>
+                </div>
+            </a>
+
+            <!-- Nav -->
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+                <a href="#api-endpoint"
+                    class="flex items-center gap-2 text-slate-700 hover:text-blue-600 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                    </svg>
+                    REST API
+                </a>
+                <a target="_blank" href="https://github.com/SudipMHX/bd-apis" rel="noopener"
+                    class="flex items-center gap-2 text-slate-700 hover:text-yellow-500 transition-colors">
+                    <svg class="text-yellow-500" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                        viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2l2.39 7.26H22l-5.8 4.22L17.59 22 12 17.77 6.41 22l1.39-8.52L2 9.26h7.61z" />
+                    </svg>
+                    GitHub
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Body -->
+    <main class="pb-10 space-y-12">
+        <!-- Hero Section Starts Here -->
+        <section class="bg-gradient-to-b from-indigo-100 to-white overflow-hidden">
+            <div class="mx-auto max-w-[1500px] py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-10">
+
+                <!-- Left Column: Text (50%) -->
+                <div class=" w-full lg:w-ful flex flex-col justify-center p-6 sm:p-8 rounded-lg">
+                    <div
+                        class="inline-flex w-60 items-center gap-x-3 rounded-full bg-indigo-100/70 px-4 py-1 text-sm font-medium text-indigo-700">
+                        <span>New Release</span>
+                        <a href="#api-endpoint" class="underline hover:text-indigo-900">Explore the API</a>
+                    </div>
+
+                    <h1 class="mt-10 text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900">
+                        Fast & Free <span class="text-indigo-600">Geo API</span> for Bangladesh
+                    </h1>
+
+                    <p class="mt-6 text-base sm:text-lg text-gray-700">
+                        Access accurate divisions, districts, upazilas, and unions of Bangladesh. Simple, fast, and
+                        ready for developers.
+                    </p>
+
+                    <div class="mt-10 flex flex-wrap gap-4">
+                        <a href="#api-endpoint"
+                            class="rounded-lg bg-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow-md hover:bg-indigo-500 transition-colors">
+                            Get Started
+                        </a>
+                        <a href="https://github.com/SudipMHX/bd-apis" target="_blank"
+                            class="text-sm font-semibold text-gray-800 flex items-center gap-1 hover:text-indigo-700 transition-colors">
+                            View on GitHub →
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Code Preview (50%) -->
+                <div class="mt-16 sm:mt-24 lg:mt-0 w-full lg:w-1/2 flex justify-center items-center">
+                    <div class="w-full max-w-md rounded-xl bg-white shadow-lg p-6 ring-1 ring-gray-200">
+                        <div class="flex items-center gap-2 mb-2">
+                            <div class="h-2 w-2 rounded-full bg-red-400"></div>
+                            <div class="h-2 w-2 rounded-full bg-yellow-300"></div>
+                            <div class="h-2 w-2 rounded-full bg-green-400"></div>
+                        </div>
+                        <pre class="text-sm overflow-x-auto"><code class="text-gray-800">
+<span class="text-gray-500">// Fetch divisions</span>
+<span class="text-blue-700">fetch</span>(<span class="text-amber-700">'/api/geo/divisions'</span>)
+  .<span class="text-blue-700">then</span>(res => res.json())
+  .<span class="text-blue-700">then</span>(data => console.log(data));
+        </code></pre>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!-- Summary Cards -->
+        <section class="container mx-auto px-6">
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-6">
+                <div class="summary-card p-5 flex flex-col items-center bg-white rounded-lg shadow">
+                    <h3 class="text-slate-500 font-medium">Divisions</h3>
+                    <p id="divisions-count" class="text-3xl font-extrabold text-blue-700">
+                        8
+                    </p>
+                </div>
+                <div class="summary-card p-5 flex flex-col items-center bg-white rounded-lg shadow">
+                    <h3 class="text-slate-500 font-medium">Districts</h3>
+                    <p id="districts-count" class="text-3xl font-extrabold text-emerald-600">
+                        64
+                    </p>
+                </div>
+                <div class="summary-card p-5 flex flex-col items-center bg-white rounded-lg shadow">
+                    <h3 class="text-slate-500 font-medium">Upazilas</h3>
+                    <p id="upazilas-count" class="text-3xl font-extrabold text-violet-600">
+                        495
+                    </p>
+                </div>
+                <div class="summary-card p-5 flex flex-col items-center bg-white rounded-lg shadow">
+                    <h3 class="text-slate-500 font-medium">Unions</h3>
+                    <p id="unions-count" class="text-3xl font-extrabold text-pink-600">
+                        4550
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- V2 API Explorer -->
+        <section class="container mx-auto px-6">
+            <div class="bg-white p-6 rounded-lg border border-slate-200">
+                <h2 class="text-xl font-bold text-slate-700 mb-4">API Explorer</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Left: Dropdowns -->
+                    <div class="explorer-card p-8">
+                        <div class="relative space-y-4">
+                            <select id="division-select"
+                                class="w-full p-3 rounded-md font-semibold custom-select appearance-none bg-no-repeat"
+                                style="
+                    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23009688%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.4-5.4-12.8z%22%2F%3E%3C%2Fsvg%3E');
+                    background-position: right 1rem center;
+                    background-size: 0.65em auto;
+                  ">
+                                <option value="">Select Division</option>
+                            </select>
+                            <select id="district-select"
+                                class="w-full p-3 rounded-md font-semibold custom-select appearance-none bg-no-repeat"
+                                style="
+                    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23009688%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.4-5.4-12.8z%22%2F%3E%3C%2Fsvg%3E');
+                    background-position: right 1rem center;
+                    background-size: 0.65em auto;
+                  " disabled>
+                                <option value="">Select District</option>
+                            </select>
+                            <select id="upazila-select"
+                                class="w-full p-3 rounded-md font-semibold custom-select appearance-none bg-no-repeat"
+                                style="
+                    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23009688%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.4-5.4-12.8z%22%2F%3E%3C%2Fsvg%3E');
+                    background-position: right 1rem center;
+                    background-size: 0.65em auto;
+                  " disabled>
+                                <option value="">Select Upazila</option>
+                            </select>
+                            <select id="union-select"
+                                class="w-full p-3 rounded-md font-semibold custom-select appearance-none bg-no-repeat"
+                                style="
+                    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23009688%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.4-5.4-12.8z%22%2F%3E%3C%2Fsvg%3E');
+                    background-position: right 1rem center;
+                    background-size: 0.65em auto;
+                  " disabled>
+                                <option value="">Select Union</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Right: API Endpoint Display -->
+                    <div class="bg-slate-800 rounded-lg p-6 flex flex-col justify-center gap-3">
+                        <div>
+                            <p class="text-sm text-slate-400 mb-2">API Endpoint</p>
+                            <pre
+                                class="bg-slate-900 p-4 rounded-md text-emerald-400 overflow-x-auto"><code >/api/geo</code></pre>
+                        </div>
+                        <div>
+                            <p class="text-sm text-slate-400 mb-2">Live API Endpoint</p>
+                            <pre
+                                class="bg-slate-900 p-4 rounded-md text-emerald-400 overflow-x-auto"><code id="api-endpoint-display"></code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Display Area -->
+        <section class="container mx-auto px-6">
+            <h2 class="text-xl font-bold text-slate-700 mb-4">Current List</h2>
+            <div id="data-container" class="bg-white p-6 rounded-lg border border-slate-200 min-h-[200px]">
+                <!-- Data, loader, or error will be injected here -->
+            </div>
+        </section>
+
+        <!-- API END POINT -->
+        <section class="container mx-auto px-6" id="api-endpoint">
+            <div class="bg-white p-6 rounded-lg border border-slate-200 mt-12">
+                <h2 class="text-xl font-bold text-slate-700 mb-4">API Endpoint</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-slate-800 rounded-lg p-6 flex flex-col justify-center">
+                        <p class="text-sm text-slate-400 mb-2">Get all divisons</p>
+                        <pre
+                            class="bg-slate-900 p-4 rounded-md text-emerald-400 overflow-x-auto"><code>/api/geo/divisions</code></pre>
+                    </div>
+                    <div class="bg-slate-800 rounded-lg p-6 flex flex-col justify-center">
+                        <p class="text-sm text-slate-400 mb-2">Get all districts</p>
+                        <pre
+                            class="bg-slate-900 p-4 rounded-md text-emerald-400 overflow-x-auto"><code>/api/geo/districts</code></pre>
+                    </div>
+                    <div class="bg-slate-800 rounded-lg p-6 flex flex-col justify-center">
+                        <p class="text-sm text-slate-400 mb-2">
+                            Get districts by division
+                        </p>
+                        <pre
+                            class="bg-slate-900 p-4 rounded-md text-emerald-400 overflow-x-auto"><code>/api/geo/districts/{division_id}</code></pre>
+                    </div>
+                    <div class="bg-slate-800 rounded-lg p-6 flex flex-col justify-center">
+                        <p class="text-sm text-slate-400 mb-2">Get all upazilas</p>
+                        <pre
+                            class="bg-slate-900 p-4 rounded-md text-emerald-400 overflow-x-auto"><code>/api/geo/upazilas</code></pre>
+                    </div>
+                    <div class="bg-slate-800 rounded-lg p-6 flex flex-col justify-center">
+                        <p class="text-sm text-slate-400 mb-2">
+                            Get upazilas by district
+                        </p>
+                        <pre
+                            class="bg-slate-900 p-4 rounded-md text-emerald-400 overflow-x-auto"><code>/api/geo/upazilas/{district_id}</code></pre>
+                    </div>
+                    <div class="bg-slate-800 rounded-lg p-6 flex flex-col justify-center">
+                        <p class="text-sm text-slate-400 mb-2">Get unions by upzilla</p>
+                        <pre
+                            class="bg-slate-900 p-4 rounded-md text-emerald-400 overflow-x-auto"><code>/api/geo/unions/{upazila_id}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Use Cases Section Starts Here -->
+        <section class="container mx-auto px-6">
+            <div class="bg-white py-10 rounded-lg border border-slate-200">
+                <div class="px-6 lg:px-8">
+                    <div class="flex justify-between items-center flex-col-reverse lg:flex-row">
+                        <!-- Left Column: Text Content -->
+                        <div class="lg:pt-4">
+                            <div class="lg:max-w-lg">
+                                <h2 class="text-base font-semibold leading-7 text-blue-600">
+                                    Build Anything With BDAPIS
+                                </h2>
+                                <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                                    Empowering Your Innovations
+                                </p>
+                                <p class="mt-6 text-lg leading-8 text-gray-600">
+                                    From large-scale government projects to local e-commerce
+                                    stores, our Geo API provides the foundational data to build
+                                    smarter and more efficient applications.
+                                </p>
+                                <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
+                                    <!-- Use Case 1 -->
+                                    <div class="relative pl-9">
+                                        <dt class="inline font-semibold text-gray-900">
+                                            <svg class="absolute left-1 top-1 h-5 w-5 text-blue-600" viewBox="0 0 20 20"
+                                                fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd"
+                                                    d="M5.5 17a4.5 4.5 0 01-1.44-8.765 4.5 4.5 0 018.302-3.046a4.5 4.5 0 014.504 4.272A4.5 4.5 0 0115.5 17H5.5zm3.75-2.75a.75.75 0 001.5 0V9.66l1.95 2.1a.75.75 0 101.1-1.02l-3.25-3.5a.75.75 0 00-1.1 0l-3.25 3.5a.75.75 0 101.1 1.02l1.95-2.1v4.59z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                            Government & Public Sector.
+                                        </dt>
+                                        <dd class="inline">
+                                            Ideal for official dashboards, public service portals,
+                                            and data-driven policy making.
+                                        </dd>
+                                    </div>
+
+                                    <!-- Use Case 2 -->
+                                    <div class="relative pl-9">
+                                        <dt class="inline font-semibold text-gray-900">
+                                            <svg class="absolute left-1 top-1 h-5 w-5 text-blue-600" viewBox="0 0 20 20"
+                                                fill="currentColor" aria-hidden="true">
+                                                <path
+                                                    d="M3.5 2.75a.75.75 0 00-1.5 0v14.5a.75.75 0 001.5 0v-4.392l1.657-.348a6.442 6.442 0 016.686 0L16.5 12.858V2.75a.75.75 0 00-1.5 0v7.821l-1.657-.348a4.943 4.943 0 00-5.172 0L3.5 12.858V2.75z" />
+                                            </svg>
+                                            E-commerce & Logistics.
+                                        </dt>
+                                        <dd class="inline">
+                                            Power your platform with district-based delivery,
+                                            shipping zones, and address verification.
+                                        </dd>
+                                    </div>
+
+                                    <!-- Use Case 3 -->
+                                    <div class="relative pl-9">
+                                        <dt class="inline font-semibold text-gray-900">
+                                            <svg class="absolute left-1 top-1 h-5 w-5 text-blue-600" viewBox="0 0 20 20"
+                                                fill="currentColor" aria-hidden="true">
+                                                <path
+                                                    d="M15.5 2.75a.75.75 0 01.75.75v13a.75.75 0 01-1.5 0v-3.379a2.001 2.001 0 00-1.1-1.78L11.5 10.5v-3a.75.75 0 00-1.5 0v3l-2.4-1.121a2.001 2.001 0 00-1.1-1.78V3.5a.75.75 0 011.5 0v3.379c0 .468.216.91.58 1.186l2.4 1.121a.75.75 0 00.52 0l2.4-1.121A2.001 2.001 0 0014 6.879V3.5a.75.75 0 01.75-.75z" />
+                                            </svg>
+                                            Mobile & Web Apps.
+                                        </dt>
+                                        <dd class="inline">
+                                            Implement regional filtering, location-based content,
+                                            and personalized user experiences.
+                                        </dd>
+                                    </div>
+                                    <!-- Use Case 4 -->
+                                    <div class="relative pl-9">
+                                        <dt class="inline font-semibold text-gray-900">
+                                            <svg class="absolute left-1 top-1 h-5 w-5 text-blue-600" viewBox="0 0 20 20"
+                                                fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd"
+                                                    d="M11.75 2.75a.75.75 0 01.75.75v13a.75.75 0 01-1.5 0V3.5a.75.75 0 01.75-.75z"
+                                                    clip-rule="evenodd" />
+                                                <path fill-rule="evenodd"
+                                                    d="M8.25 2.75a.75.75 0 01.75.75v13a.75.75 0 01-1.5 0V3.5a.75.75 0 01.75-.75z"
+                                                    clip-rule="evenodd" />
+                                                <path fill-rule="evenodd"
+                                                    d="M4.75 6.75a.75.75 0 01.75.75v6a.75.75 0 01-1.5 0v-6a.75.75 0 01.75-.75z"
+                                                    clip-rule="evenodd" />
+                                                <path fill-rule="evenodd"
+                                                    d="M15.25 6.75a.75.75 0 01.75.75v6a.75.75 0 01-1.5 0v-6a.75.75 0 01.75-.75z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                            Data Analytics & Research.
+                                        </dt>
+                                        <dd class="inline">
+                                            Utilize accurate geographical data for market research,
+                                            demographic studies, and academic projects.
+                                        </dd>
+                                    </div>
+                                </dl>
+                            </div>
+                        </div>
+
+                        <!-- Right Column: Image/Visual -->
+                        <div class="">
+                            <img src="./images/bangladesh.svg" alt="API Visualization" class=""
+                                onerror="this.onerror=null;this.src='https://placehold.co/600x700/e0f2fe/334155?text=Image+Not+Found';" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section Starts Here -->
+        <section class="container mx-auto px-6">
+            <div class="bg-slate-50">
+                <!-- Section Header -->
+                <div class="mx-auto max-w-4xl text-center">
+                    <h2 class="text-base font-semibold leading-7 text-blue-600">
+                        Have Questions About BDAPI?
+                    </h2>
+                    <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                        We Have Answers
+                    </p>
+                    <p class="mt-6 text-lg leading-8 text-gray-600">
+                        Find answers to the most common questions about our Geo API below.
+                        If you can't find what you're looking for, just ask!
+                    </p>
+                </div>
+
+                <!-- FAQ Grid -->
+                <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
+                    <dl class="grid max-w-xl grid-cols-1 gap-8 lg:max-w-none lg:grid-cols-2">
+                        <!-- FAQ Item 1 -->
+                        <div class="summary-card bg-white rounded-lg shadow group flex flex-col p-8">
+                            <dt class="flex items-center gap-x-4">
+                                <div
+                                    class="flex h-12 w-12 flex-none items-center justify-center rounded-lg bg-blue-600 text-white">
+                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                        stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.826-1.106-2.156 0-2.982C10.544 7.22 11.275 7 12 7c.768 0 1.536.219 2.143.659l.879.659" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-lg font-semibold leading-7 text-gray-900">
+                                    Is this API completely free?
+                                </h3>
+                            </dt>
+                            <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                                <p class="flex-auto">
+                                    Yes, absolutely! The API is 100% free for both personal and
+                                    commercial projects. You don't need to pay anything, and
+                                    there are no hidden charges.
+                                </p>
+                            </dd>
+                        </div>
+
+                        <!-- FAQ Item 2 -->
+                        <div class="summary-card bg-white rounded-lg shadow group flex flex-col p-8">
+                            <dt class="flex items-center gap-x-4">
+                                <div
+                                    class="flex h-12 w-12 flex-none items-center justify-center rounded-lg bg-blue-600 text-white">
+                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                        stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.42-.42.995-.659 1.591-.659h1.875a3 3 0 013 3z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-lg font-semibold leading-7 text-gray-900">
+                                    Do I need an API key?
+                                </h3>
+                            </dt>
+                            <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                                <p class="flex-auto">
+                                    No API key is required. You can start making requests to the
+                                    endpoints immediately without any authentication. It's
+                                    designed to be as simple as possible.
+                                </p>
+                            </dd>
+                        </div>
+
+                        <!-- FAQ Item 3 -->
+                        <div class="summary-card bg-white rounded-lg shadow group flex flex-col p-8">
+                            <dt class="flex items-center gap-x-4">
+                                <div
+                                    class="flex h-12 w-12 flex-none items-center justify-center rounded-lg bg-blue-600 text-white">
+                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                        stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-lg font-semibold leading-7 text-gray-900">
+                                    How accurate is the data?
+                                </h3>
+                            </dt>
+                            <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                                <p class="flex-auto">
+                                    The data is sourced from reliable government information and
+                                    community-driven projects. We strive to keep it updated with
+                                    the latest administrative changes in Bangladesh to ensure
+                                    high accuracy.
+                                </p>
+                            </dd>
+                        </div>
+
+                        <!-- FAQ Item 4 -->
+                        <div class="summary-card bg-white rounded-lg shadow group flex flex-col p-8">
+                            <dt class="flex items-center gap-x-4">
+                                <div
+                                    class="flex h-12 w-12 flex-none items-center justify-center rounded-lg bg-blue-600 text-white">
+                                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                        stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-lg font-semibold leading-7 text-gray-900">
+                                    Are names available in Bengali?
+                                </h3>
+                            </dt>
+                            <dd class="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                                <p class="flex-auto">
+                                    Yes! Every location (division, district, upazila, and union)
+                                    in the API response includes the name in both English and
+                                    Bengali, making it perfect for local applications.
+                                </p>
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- Footer -->
+    <footer class="dark-footer mt-16 pt-12 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+                <div>
+                    <h3 class="font-bold text-white text-base mb-3">Bangladesh API</h3>
+                    <p>
+                        A comprehensive REST API providing geographical data for
+                        Bangladesh including divisions, districts, upazilas, and unions
+                        with both English and Bengali names.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-white text-base mb-3">Our API</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="/geo-api-v1"
+                                class="hover:text-white transition-colors flex items-center gap-2">Geo-v1</a>
+                            <a href="" class="hover:text-white transition-colors flex items-center gap-2">API Two</a>
+                            <a href="" class="hover:text-white transition-colors flex items-center gap-2">API Three</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-bold text-white text-base mb-3">Resources</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#" class="hover:text-white transition-colors flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                </svg>
+                                API Documentation</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/SudipMHX/bd-apis" target="_blank"
+                                class="hover:text-white transition-colors flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                                </svg>
+                                GitHub Repository</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-700 mt-8 pt-6 text-center text-xs text-slate-400">
+                <p>
+                    Developed with ❤️ by
+                    <a href="https://github.com/sudipmhx" class="text-blue-400 hover:underline" target="_blank"
+                        rel="noopener">Mostakin Ahmed</a>
+                    | &copy; <span id="year"></span>
+                    <a href="https://bdapis.vercel.app/" class="text-blue-400 hover:underline" target="_blank"
+                        rel="noopener">BD API List</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="./assets/js/geo-v2.js"></script>
+</body>
+
+</html>
