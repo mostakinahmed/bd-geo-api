@@ -13,8 +13,6 @@ let allDistricts = [];
 let allUpazilas = [];
 let allUnions = [];
 
-console.log(allDistricts, allDivisions);
-
 // Generic fetch
 async function fetchData(endpoint) {
   const res = await fetch(`${BASE_URL}${endpoint}`);
@@ -86,7 +84,7 @@ async function loadAllData() {
     const upazilasRes = await fetchData("/upazilas");
     const unionsRes = await fetchData("/unions");
 
-    allDivisions = divisionsRes.data || [];
+    allDivisions = divisionsRes.data.data || [];
     allDistricts = districtsRes.data || [];
     allUpazilas = upazilasRes.data || [];
     allUnions = unionsRes.data || [];
@@ -194,6 +192,6 @@ unionSelect.addEventListener("change", () => {
 
   updateApiEndpoint(`/api/geo/unions`);
 });
-
+console.log(allDistricts, allDivisions);
 // Initialize
 window.addEventListener("DOMContentLoaded", loadAllData);
