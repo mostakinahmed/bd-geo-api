@@ -13,6 +13,8 @@ let allDistricts = [];
 let allUpazilas = [];
 let allUnions = [];
 
+console.log(allDistricts, allDivisions);
+
 // Generic fetch
 async function fetchData(endpoint) {
   const res = await fetch(`${BASE_URL}${endpoint}`);
