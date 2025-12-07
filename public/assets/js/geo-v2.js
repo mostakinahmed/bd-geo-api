@@ -97,7 +97,7 @@ async function loadAllData() {
       "Select Division"
     );
     updateApiEndpoint("/api/geo/divisions");
-    console.log(allDistricts, allDivisions);
+
     clearCurrentList(); // Make blank initially
   } catch (err) {
     console.error("Failed to load initial data:", err);
