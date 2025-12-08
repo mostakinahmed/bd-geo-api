@@ -2,11 +2,12 @@
   "name": "my-js-system",
   "version": "1.0.0",
   "main": "index.js",
-"scripts": {
-  "start": "node index.js",
-  "dev": "nodemon index.js"
-},
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^5.2.1"
   },
   "devDependencies": {

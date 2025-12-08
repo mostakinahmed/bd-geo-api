@@ -1,9 +1,10 @@
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
+const cors = require("cors");
 
 const app = express();
-
+app.use(cors());
 // Allow public folder
 app.use(express.static(path.join(process.cwd(), "public")));
 

@@ -7,31 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Essential Meta Tags -->
-    <title>BD APIs – Fast & Free Bangladesh Location API (bdapi)</title>
+    <title>BD APIs – Fast & Free Bangladesh Location API</title>
     <meta name="description"
-        content="BD APIs (bdapi, bdapis) offers a powerful and fast API to get Bangladesh's geo data – divisions, districts, upazilas, and unions. Perfect for developers!" />
+        content="BD OPEN APIs (bdapi, bdapis) offers a powerful and fast API to get Bangladesh's geo data – divisions, districts, upazilas, and unions. Perfect for developers!" />
     <meta name="keywords"
-        content="bdapis, bdapi, bd apis, bangladesh api, bangladesh location api, bd location data, bangladesh geo api, divisions api, districts api, upazila api, union api, bd map api, bangladesh map data, bangladesh api explorer" />
-    <meta name="author" content="Mahatab Hossen Sudip" />
+        content="bdapis, bdopenapi,bdopenapis, bdapi, bd apis, bangladesh api, bangladesh location api, bd location data, bangladesh geo api, divisions api, districts api, upazila api, union api, bd map api, bangladesh map data, bangladesh api explorer" />
+    <meta name="author" content="Mostakin Ahmed" />
     <meta name="robots" content="index, follow" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="BD APIs – Fast & Free Bangladesh Location API (bdapis, bdapi)" />
+    <meta property="og:title" content="BD OPEN APIs – Fast & Free Bangladesh Location API" />
     <meta property="og:description"
-        content="Access structured geo location data of Bangladesh through bdapi. Get all divisions, districts, upazilas, and unions easily." />
-    <meta property="og:url" content="https://bdapis.vercel.app" />
-    <meta property="og:image" content="https://bdapis.vercel.app/images/readme-v2.png" />
+        content="Access structured geo location data of Bangladesh through bdopenapi. Get all divisions, districts, upazilas, and unions easily." />
+    <meta property="og:url" content="https://bdopenapi.vercel.app" />
+    <meta property="og:image" content="https://bdopenapi.vercel.app/images/readme-v2.png" />
 
-    <link rel="canonical" href="https://bdapis.vercel.app" />
+    <link rel="canonical" href="https://bdopenapi.vercel.app" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="BD APIs – Bangladesh Geo API (bdapis, bdapi)" />
+    <meta name="twitter:title" content="BD OPEN APIs – Bangladesh Geo API" />
     <meta name="twitter:description"
-        content="Developer-friendly and fast API to explore Bangladesh location data. bdapis, bdapi – everything in one place." />
-    <meta name="twitter:image" content="https://bdapis.vercel.app/images/readme-v2.png" />
-    <meta name="twitter:site" content="@SudipMHX" />
+        content="Developer-friendly and fast API to explore Bangladesh location data. bdopenapi – everything in one place." />
+    <meta name="twitter:image" content="https://bdopenapi.vercel.app/images/readme-v2.png" />
+    <meta name="twitter:site" content="@mostakinahmed" />
 
     <!-- style sheet -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -43,7 +43,9 @@
     <link rel="shortcut icon" href="./images/favicon.png" type="image/*" />
 
     <!-- Google Search Console -->
-    <meta name="google-site-verification" content="B3CoN4CXK2_a-KVMdCCRaWuP3Z__Xc-rTAYAbc_NSCo" />
+    <meta name="google-site-verification" content="xdTC-9YkTR2i4BFXXgKwPJiA80kLrVV7_5KSN6tDLi0" />
+
+
 </head>
 
 <!-- ----------------------------------------------------------------------------- -->
@@ -54,8 +56,8 @@
         <div class="container mx-auto px-6 py-2 flex flex-col md:flex-row justify-between items-center">
             <!-- Logo + Title -->
             <a href="/" class="flex items-center gap-4 group hover:scale-105 transition-transform duration-300">
-                <div class="p-2 bg-blue-50 rounded-full">
-                    <svg class="w-8 h-8 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none"
+                <div class="p-2 bg-blue-100 rounded-full">
+                    <svg class="w-6 h-6 lg:w-8 lg:h-8  text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none"
                         viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -63,10 +65,10 @@
                     </svg>
                 </div>
                 <div>
-                    <h1 class="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                    <h1 class="lg:text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
                         BD Open APIs
                     </h1>
-                    <p class="text-sm text-gray-500 group-hover:text-gray-700 transition-colors">
+                    <p class="lg:text-sm text-xs text-gray-500 group-hover:text-gray-700 transition-colors">
                         Explore divisions, districts & upazilas
                     </p>
                 </div>
@@ -180,30 +182,30 @@
         <section class="container mx-auto lg:px-6 px-2">
             <div class="grid grid-cols-2 sm:grid-cols-4 lg:gap-6 gap-3">
                 <div
-                    class="summary-card border-1 border-indigo-300 p-5 flex flex-col items-center bg-white rounded-lg shadow">
-                    <h3 class="text-slate-500 font-medium mb-1">Divisions</h3>
-                    <p id="divisions-count" class="text-3xl font-extrabold text-blue-700">
+                    class="summary-card border-1 h-20 lg:h-full border-indigo-300 lg:p-5 p-3 flex flex-col items-center bg-white rounded-lg shadow">
+                    <h3 class="text-slate-500 mt-1 font-medium lg:mb-1">Divisions</h3>
+                    <p id="divisions-count" class="lg:text-3xl text-2xl font-extrabold text-blue-700">
                         8
                     </p>
                 </div>
                 <div
-                    class="summary-card border-1 border-indigo-300  p-5 flex flex-col items-center bg-white rounded-lg shadow">
-                    <h3 class="text-slate-500 mb-1 font-medium">Districts</h3>
-                    <p id="districts-count" class="text-3xl font-extrabold text-emerald-600">
+                    class="summary-card border-1 h-20 lg:h-full border-indigo-300  lg:p-5 p-3 flex flex-col items-center bg-white rounded-lg shadow">
+                    <h3 class="text-slate-500 lg:mb-1 mt-1 font-medium">Districts</h3>
+                    <p id="districts-count" class="lg:text-3xl text-2xl  font-extrabold text-emerald-600">
                         64
                     </p>
                 </div>
                 <div
-                    class="summary-card border-1 border-indigo-300  p-5 flex flex-col items-center bg-white rounded-lg shadow">
-                    <h3 class="text-slate-500 mb-1 font-medium">Upazilas</h3>
-                    <p id="upazilas-count" class="text-3xl font-extrabold text-violet-600">
+                    class="summary-card border-1 h-20 lg:h-full border-indigo-300  lg:p-5 p-3 flex flex-col items-center bg-white rounded-lg shadow">
+                    <h3 class="text-slate-500 lg:mb-1 mt-1 font-medium">Upazilas</h3>
+                    <p id="upazilas-count" class="lg:text-3xl text-2xl  font-extrabold text-violet-600">
                         495
                     </p>
                 </div>
                 <div
-                    class="summary-card border-1 border-indigo-300  p-5 flex flex-col items-center bg-white rounded-lg shadow">
-                    <h3 class="text-slate-500 mb-1 font-medium">Unions</h3>
-                    <p id="unions-count" class="text-3xl font-extrabold text-pink-600">
+                    class="summary-card border-1 h-20 lg:h-full border-indigo-300  lg:p-5 p-3 flex flex-col items-center bg-white rounded-lg shadow">
+                    <h3 class="text-slate-500 lg:mb-1 mt-1 font-medium">Unions</h3>
+                    <p id="unions-count" class="lg:text-3xl text-2xl  font-extrabold text-pink-600">
                         4550
                     </p>
                 </div>
@@ -286,51 +288,51 @@
             <div class="bg-white p-4 rounded-lg border border-slate-200 mt-12">
                 <h2 class="text-xl font-bold text-slate-700 mb-4">API Endpoint</h2>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-slate-800 rounded-lg p-4 flex flex-col justify-center">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <div class="bg-slate-800 rounded-lg lg:p-6 p-3 flex flex-col justify-center">
                         <p class="text-sm text-slate-400 mb-2">Get all divisons</p>
                         <pre
-                            class="bg-slate-900 p-4 rounded-md text-emerald-400 overflow-x-auto"><code>/api/geo/divisions</code></pre>
+                            class="bg-slate-900 p-4 rounded-md text-emerald-400 text-sm lg:text-[17px]  overflow-x-auto"><code>/api/geo/divisions</code></pre>
                     </div>
-                    <div class="bg-slate-800 rounded-lg p-6 flex flex-col justify-center">
+                    <div class="bg-slate-800 rounded-lg  lg:p-6 p-3  flex flex-col justify-center">
                         <p class="text-sm text-slate-400 mb-2">Get all districts</p>
                         <pre
-                            class="bg-slate-900 p-4 rounded-md text-emerald-400 overflow-x-auto"><code>/api/geo/districts</code></pre>
+                            class="bg-slate-900 p-4 rounded-md text-emerald-400 text-sm lg:text-[17px] overflow-x-auto"><code>/api/geo/districts</code></pre>
                     </div>
-                    <div class="bg-slate-800 rounded-lg p-6 flex flex-col justify-center">
+                    <div class="bg-slate-800 rounded-lg  lg:p-6 p-3  flex flex-col justify-center">
                         <p class="text-sm text-slate-400 mb-2">
                             Get districts by division
                         </p>
                         <pre
-                            class="bg-slate-900 p-4 rounded-md text-emerald-400 overflow-x-auto"><code>/api/geo/districts/{division_id}</code></pre>
+                            class="bg-slate-900 p-4 rounded-md text-sm text-emerald-400 text-sm lg:text-[17px] overflow-x-auto"><code>/api/geo/districts/{division_id}</code></pre>
                     </div>
-                    <div class="bg-slate-800 rounded-lg p-6 flex flex-col justify-center">
+                    <div class="bg-slate-800 rounded-lg  lg:p-6 p-3  flex flex-col justify-center">
                         <p class="text-sm text-slate-400 mb-2">Get all upazilas</p>
                         <pre
-                            class="bg-slate-900 p-4 rounded-md text-emerald-400 overflow-x-auto"><code>/api/geo/upazilas</code></pre>
+                            class="bg-slate-900 p-4 rounded-md text-emerald-400 text-sm lg:text-[17px] overflow-x-auto"><code>/api/geo/upazilas</code></pre>
                     </div>
-                    <div class="bg-slate-800 rounded-lg p-6 flex flex-col justify-center">
+                    <div class="bg-slate-800 rounded-lg  lg:p-6 p-3  flex flex-col justify-center">
                         <p class="text-sm text-slate-400 mb-2">
                             Get upazilas by district
                         </p>
                         <pre
-                            class="bg-slate-900 p-4 rounded-md text-emerald-400 overflow-x-auto"><code>/api/geo/upazilas/{district_id}</code></pre>
+                            class="bg-slate-900 p-4 rounded-md text-emerald-400 text-sm lg:text-[17px] overflow-x-auto"><code>/api/geo/upazilas/{district_id}</code></pre>
                     </div>
-                    <div class="bg-slate-800 rounded-lg p-6 flex flex-col justify-center">
+                    <div class="bg-slate-800 rounded-lg  lg:p-6 p-3  flex flex-col justify-center">
                         <p class="text-sm text-slate-400 mb-2">
                             Get all unions
                         </p>
                         <pre
-                            class="bg-slate-900 p-4 rounded-md text-emerald-400 overflow-x-auto"><code>/api/geo/unions</code></pre>
+                            class="bg-slate-900 p-4 rounded-md text-emerald-400 text-sm lg:text-[17px] overflow-x-auto"><code>/api/geo/unions</code></pre>
                     </div>
-                    <div class="bg-slate-800 rounded-lg p-6 flex flex-col justify-center">
+                    <div class="bg-slate-800 rounded-lg  lg:p-6 p-3  flex flex-col justify-center">
                         <p class="text-sm text-slate-400 mb-2">Get unions by upzilla</p>
                         <pre
-                            class="bg-slate-900 p-4 rounded-md text-emerald-400 overflow-x-auto"><code>/api/geo/unions/{upazila_id}</code></pre>
+                            class="bg-slate-900 p-4 rounded-md text-emerald-400 text-sm lg:text-[17px] overflow-x-auto"><code>/api/geo/unions/{upazila_id}</code></pre>
                     </div>
 
                     <!-- extra -->
-                    <div class="bg-slate-800 cursor-pointer rounded-lg p-6 flex flex-col justify-center hover:scale-105 transition-transform duration-200"
+                    <div class="bg-slate-800 cursor-pointer rounded-lg  lg:p-6 p-3  flex flex-col justify-center hover:scale-105 transition-transform duration-200"
                         id="openModalBtn">
                         <p class="text-sm text-slate-400 mb-2">Get All APIs</p>
                         <pre
@@ -343,7 +345,7 @@
 
         <!-- Modal -->
         <div id="apiModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
-            <div class="bg-slate-900 rounded-lg w-11/12 max-w-2xl p-6 relative">
+            <div class="bg-slate-900 rounded-lg w-11/12 max-w-3xl p-6 relative">
                 <!-- Close Button -->
                 <button id="closeModalBtn" class="absolute  top-3 right-3 text-slate-400 hover:text-white">
                     <span class="lg:text-3xl text-xl "> ✕</span>
@@ -351,7 +353,7 @@
 
                 <h2 class="text-xl text-emerald-400 mb-4 text-center">API List</h2>
                 <div class="overflow-x-auto">
-                    <ul class="space-y-2 text-slate-300 min-w-[max-content]">
+                    <ul class="space-y-2 text-slate-300 lg:text-lg min-w-[max-content]">
                         <li><code>https://bdopenapi.vercel.app/api/geo/divisions</code></li>
                         <li><code>https://bdopenapi.vercel.app/api/geo/districts</code></li>
                         <li><code>https://bdopenapi.vercel.app/api/geo/districts/{division_id}</code></li>
@@ -602,13 +604,13 @@
     </main>
     <!-- Footer -->
 
-    <footer class="dark-footer  text-gray-200 lg:py-6 py-2">
-        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 lg:gap-10 gap-3">
+    <footer class="dark-footer text-gray-200 lg:py-6 py-2">
+        <div class="container mx-auto px-6  mt-3 lg:mt-0 grid grid-cols-1 md:grid-cols-4 lg:gap-10 gap-3">
             <!-- About -->
             <div>
                 <h3
                     class="text-white font-bold lg:text-xl text-lg  lg:mb-4 mb-1  border-b border-blue-600 inline-block pb-1">
-                    Bangladesh API
+                    Bangladesh GEO API
                 </h3>
                 <p class="text-gray-300 leading-relaxed">
                     REST API delivering Bangladesh geographic data: divisions, districts, upazilas, unions; English and
